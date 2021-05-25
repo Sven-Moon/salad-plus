@@ -1,3 +1,5 @@
+@import "/src/styles.scss";
+
 .home-wrap {
   display: grid;
   height: 180vh;
@@ -43,6 +45,8 @@
 
 .menu-btn {
   grid-area: button1;
+  background-color: $bg-construction;
+  color: $text-construction;
 }
 
 .order-btn {
@@ -51,10 +55,14 @@
 
 .signup-btn {
   grid-area: button3;
+  background-color: $bg-construction;
+  color: $text-construction;
 }
 
 .location-btn {
   grid-area: button4;
+  background-color: $bg-construction;
+  color: $text-construction;
 }
 
 .store-bg-img-area {

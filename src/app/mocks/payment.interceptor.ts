@@ -5,13 +5,13 @@ import { Observable, of } from "rxjs";
 import { selectCartTotal } from "../modules/order/state/cart/cart.selectors";
 import { trxnResult } from "../modules/payment/models/TrxnResult";
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class MockPaymentInterceptor implements HttpInterceptor {
   constructor(private store: Store<{}>) { }
 
   public intercept(req: HttpRequest<any>, next: HttpHandler):
     Observable<HttpEvent<any>> {
-    if (req.method === 'GET' && req.url == 'http://localhose:3000/api/pay') {
+    if (req.method === 'GET' && req.url == 'https://localhost:3000/api/pay') {
       const result = this.getPayResultsMockData()
       const response = new HttpResponse({
         body: result

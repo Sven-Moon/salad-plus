@@ -11,10 +11,10 @@ export class OrderStaticDataService {
     private http: HttpClient
   ) { }
 
-  baseUrl = 'http://localhost:3000/';
+  baseUrl = 'https://localhost:3000/api/order-static-data/';
 
   getOrderStaticData(): Observable<OrderStaticData> {
-    const url = this.baseUrl + 'orderStaticData/';
+    const url = this.baseUrl;
     const body = '';
     let htpOptions: {};
 
